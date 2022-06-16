@@ -1,6 +1,6 @@
 // Funciones
 function precioCuotas(valor, numCuotas){
-  resultado = valor / numCuotas
+  resultado = Math.round(valor / numCuotas)
   return resultado
 }
 
@@ -46,23 +46,23 @@ do{
 //* un if para buscar el producto en array
   let busqueda = buscarElectro(electros,prompt("Ingrese el nombre del producto que busca"))
   if (busqueda != undefined){
-    alert(`Producto: ${busqueda.nombre} con un precio de ${busqueda.precio}`) 
+    alert(`Producto: ${busqueda.nombre} con un precio de $${busqueda.precio}`) 
     let cuotas =  +prompt("Ingrese el numero de cuotas. (Ej: 3,6,9,12)")
     switch (cuotas) {
     case 3:
-        alert(`En ${cuotas} cuotas deberia pagar: $ ${precioCuotas(busqueda.precio, cuotas)} por mes`)
+        alert(`En ${cuotas} cuotas deberia pagar: $${precioCuotas(busqueda.precio, cuotas)} por mes`)
         continuar()
         break;
     case 6:
-        alert(`En ${cuotas} cuotas deberia pagar: $ ${precioCuotas(busqueda.precio, cuotas)} por mes`)
+        alert(`En ${cuotas} cuotas deberia pagar: $${precioCuotas(busqueda.precio, cuotas)} por mes`)
         continuar()
         break;
     case 9:
-        alert(`En ${cuotas} cuotas deberia pagar: $ ${precioCuotas(busqueda.precio, cuotas)} por mes`)
+        alert(`En ${cuotas} cuotas deberia pagar: $${precioCuotas(busqueda.precio, cuotas)} por mes`)
         continuar()
         break;
     case 12:
-        alert(`En ${cuotas} cuotas deberia pagar: $ ${precioCuotas(busqueda.precio, cuotas)} por mes`)
+        alert(`En ${cuotas} cuotas deberia pagar: $${precioCuotas(busqueda.precio, cuotas)} por mes`)
         continuar()
         break;    
     default:
